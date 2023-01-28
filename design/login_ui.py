@@ -107,6 +107,7 @@ class Login(object):
         self.number_le.setObjectName("number_le")
         self.password_le = QtWidgets.QLineEdit(self.frame)
         self.password_le.setGeometry(QtCore.QRect(30, 240, 383, 60))
+        self.password_le.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.password_le.setStyleSheet("position: absolute;\n"
 "width: 383px;\n"
 "height: 60px;\n"

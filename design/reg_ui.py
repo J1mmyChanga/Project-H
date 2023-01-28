@@ -109,6 +109,7 @@ class Registration(object):
         self.number_reg_le.setObjectName("number_reg_le")
         self.password_reg_le = QtWidgets.QLineEdit(self.frame)
         self.password_reg_le.setGeometry(QtCore.QRect(30, 240, 383, 60))
+        self.password_reg_le.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.password_reg_le.setStyleSheet("position: absolute;\n"
 "width: 383px;\n"
 "height: 60px;\n"
