@@ -6,9 +6,9 @@ class Lib:
     session = requests.Session()
 
     @classmethod
-    def register(cls, name, phone, password):
+    def register(cls, phone, password):
         res = cls.session.post(cls.server_address + "/api/user/create", json={
-            "name": name,
+            "name": '___',
             "phone": phone,
             "password": password
         })
