@@ -19,15 +19,15 @@ class Chose_settings(object):
         self.frame = QtWidgets.QFrame(Form)
         self.frame.setGeometry(QtCore.QRect(155, 215, 520, 728))
         self.frame.setStyleSheet("\n"
-"position: absolute;\n"
-"width: 440px;\n"
-"height: 539px;\n"
-"left: 190px;\n"
-"top: 274px;\n"
-"\n"
-"background: #6F5E53;\n"
-"mix-blend-mode: normal;\n"
-"border-radius: 15px;")
+                                 "position: absolute;\n"
+                                 "width: 440px;\n"
+                                 "height: 539px;\n"
+                                 "left: 190px;\n"
+                                 "top: 274px;\n"
+                                 "\n"
+                                 "background: #6F5E53;\n"
+                                 "mix-blend-mode: normal;\n"
+                                 "border-radius: 15px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -37,28 +37,28 @@ class Chose_settings(object):
         font.setPointSize(-1)
         self.find_rec_pb.setFont(font)
         self.find_rec_pb.setStyleSheet("QPushButton\n"
-"{\n"
-"position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 584px;\n"
-"\n"
-"background: #41393E;\n"
-"border-radius: 15px;\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 28px;\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"   background-color:#8A7968;\n"
-"}")
+                                       "{\n"
+                                       "position: absolute;\n"
+                                       "width: 383px;\n"
+                                       "height: 60px;\n"
+                                       "left: 218px;\n"
+                                       "top: 584px;\n"
+                                       "\n"
+                                       "background: #41393E;\n"
+                                       "border-radius: 15px;\n"
+                                       "color: rgb(255, 255, 255);\n"
+                                       "font-size: 28px;\n"
+                                       "}\n"
+                                       "\n"
+                                       "QPushButton:hover\n"
+                                       "{\n"
+                                       "   background-color:#8A7968;\n"
+                                       "}")
         self.find_rec_pb.setObjectName("find_rec_pb")
         self.cinema_rb = QtWidgets.QRadioButton(self.frame)
         self.cinema_rb.setGeometry(QtCore.QRect(40, 80, 131, 41))
         self.cinema_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                     "color: white;")
         self.cinema_rb.setObjectName("cinema_rb")
         self.plans_bg = QtWidgets.QButtonGroup(Form)
         self.plans_bg.setObjectName("plans_bg")
@@ -66,51 +66,51 @@ class Chose_settings(object):
         self.label_2 = QtWidgets.QLabel(self.frame)
         self.label_2.setGeometry(QtCore.QRect(40, 30, 461, 40))
         self.label_2.setStyleSheet("position: absolute;\n"
-"width: 380px;\n"
-"height: 40px;\n"
-"left: 218px;\n"
-"top: 324px;\n"
-"\n"
-"font-family: \'Paytone One\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 28px;\n"
-"line-height: 39px;\n"
-"\n"
-"color: #FFFFFF;")
+                                   "width: 380px;\n"
+                                   "height: 40px;\n"
+                                   "left: 218px;\n"
+                                   "top: 324px;\n"
+                                   "\n"
+                                   "font-family: \'Paytone One\';\n"
+                                   "font-style: normal;\n"
+                                   "font-weight: 400;\n"
+                                   "font-size: 28px;\n"
+                                   "line-height: 39px;\n"
+                                   "\n"
+                                   "color: #FFFFFF;")
         self.label_2.setObjectName("label_2")
         self.dinner_rb = QtWidgets.QRadioButton(self.frame)
         self.dinner_rb.setGeometry(QtCore.QRect(210, 80, 271, 41))
         self.dinner_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                     "color: white;")
         self.dinner_rb.setObjectName("dinner_rb")
         self.plans_bg.addButton(self.dinner_rb)
         self.party_rb = QtWidgets.QRadioButton(self.frame)
         self.party_rb.setGeometry(QtCore.QRect(40, 130, 151, 41))
         self.party_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                    "color: white;")
         self.party_rb.setObjectName("party_rb")
         self.plans_bg.addButton(self.party_rb)
         self.label_3 = QtWidgets.QLabel(self.frame)
         self.label_3.setGeometry(QtCore.QRect(40, 190, 461, 40))
         self.label_3.setStyleSheet("position: absolute;\n"
-"width: 380px;\n"
-"height: 40px;\n"
-"left: 218px;\n"
-"top: 324px;\n"
-"\n"
-"font-family: \'Paytone One\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 28px;\n"
-"line-height: 39px;\n"
-"\n"
-"color: #FFFFFF;")
+                                   "width: 380px;\n"
+                                   "height: 40px;\n"
+                                   "left: 218px;\n"
+                                   "top: 324px;\n"
+                                   "\n"
+                                   "font-family: \'Paytone One\';\n"
+                                   "font-style: normal;\n"
+                                   "font-weight: 400;\n"
+                                   "font-size: 28px;\n"
+                                   "line-height: 39px;\n"
+                                   "\n"
+                                   "color: #FFFFFF;")
         self.label_3.setObjectName("label_3")
         self.mid_rb = QtWidgets.QRadioButton(self.frame)
         self.mid_rb.setGeometry(QtCore.QRect(40, 280, 261, 41))
         self.mid_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                  "color: white;")
         self.mid_rb.setObjectName("mid_rb")
         self.dif_level_bg = QtWidgets.QButtonGroup(Form)
         self.dif_level_bg.setObjectName("dif_level_bg")
@@ -118,29 +118,29 @@ class Chose_settings(object):
         self.dif_rb = QtWidgets.QRadioButton(self.frame)
         self.dif_rb.setGeometry(QtCore.QRect(40, 320, 261, 41))
         self.dif_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                  "color: white;")
         self.dif_rb.setObjectName("dif_rb")
         self.dif_level_bg.addButton(self.dif_rb)
         self.label_4 = QtWidgets.QLabel(self.frame)
         self.label_4.setGeometry(QtCore.QRect(40, 390, 461, 40))
         self.label_4.setStyleSheet("position: absolute;\n"
-"width: 380px;\n"
-"height: 40px;\n"
-"left: 218px;\n"
-"top: 324px;\n"
-"\n"
-"font-family: \'Paytone One\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 28px;\n"
-"line-height: 39px;\n"
-"\n"
-"color: #FFFFFF;")
+                                   "width: 380px;\n"
+                                   "height: 40px;\n"
+                                   "left: 218px;\n"
+                                   "top: 324px;\n"
+                                   "\n"
+                                   "font-family: \'Paytone One\';\n"
+                                   "font-style: normal;\n"
+                                   "font-weight: 400;\n"
+                                   "font-size: 28px;\n"
+                                   "line-height: 39px;\n"
+                                   "\n"
+                                   "color: #FFFFFF;")
         self.label_4.setObjectName("label_4")
         self.fish_rb = QtWidgets.QRadioButton(self.frame)
         self.fish_rb.setGeometry(QtCore.QRect(30, 440, 191, 41))
         self.fish_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                   "color: white;")
         self.fish_rb.setObjectName("fish_rb")
         self.preferences_bg = QtWidgets.QButtonGroup(Form)
         self.preferences_bg.setObjectName("preferences_bg")
@@ -148,72 +148,72 @@ class Chose_settings(object):
         self.meat_rb = QtWidgets.QRadioButton(self.frame)
         self.meat_rb.setGeometry(QtCore.QRect(30, 480, 191, 41))
         self.meat_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                   "color: white;")
         self.meat_rb.setObjectName("meat_rb")
         self.preferences_bg.addButton(self.meat_rb)
         self.pasta_rb = QtWidgets.QRadioButton(self.frame)
         self.pasta_rb.setGeometry(QtCore.QRect(230, 440, 261, 41))
         self.pasta_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                    "color: white;")
         self.pasta_rb.setObjectName("pasta_rb")
         self.preferences_bg.addButton(self.pasta_rb)
         self.salad_rb = QtWidgets.QRadioButton(self.frame)
         self.salad_rb.setGeometry(QtCore.QRect(230, 480, 261, 41))
         self.salad_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                    "color: white;")
         self.salad_rb.setObjectName("salad_rb")
         self.preferences_bg.addButton(self.salad_rb)
         self.dessert_rb = QtWidgets.QRadioButton(self.frame)
         self.dessert_rb.setGeometry(QtCore.QRect(30, 520, 191, 41))
         self.dessert_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                      "color: white;")
         self.dessert_rb.setObjectName("dessert_rb")
         self.preferences_bg.addButton(self.dessert_rb)
         self.easy_rb = QtWidgets.QRadioButton(self.frame)
         self.easy_rb.setGeometry(QtCore.QRect(40, 240, 271, 41))
         self.easy_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                   "color: white;")
         self.easy_rb.setObjectName("easy_rb")
         self.dif_level_bg.addButton(self.easy_rb)
         self.snacks_rb = QtWidgets.QRadioButton(self.frame)
         self.snacks_rb.setGeometry(QtCore.QRect(230, 520, 261, 41))
         self.snacks_rb.setStyleSheet("font-size: 25px;\n"
-"color: white;")
+                                     "color: white;")
         self.snacks_rb.setObjectName("snacks_rb")
         self.preferences_bg.addButton(self.snacks_rb)
         self.frame_2 = QtWidgets.QFrame(Form)
         self.frame_2.setGeometry(QtCore.QRect(120, 70, 580, 100))
         self.frame_2.setStyleSheet("\n"
-"position: absolute;\n"
-"width: 440px;\n"
-"height: 539px;\n"
-"left: 190px;\n"
-"top: 274px;\n"
-"\n"
-"background: #6F5E53;\n"
-"mix-blend-mode: normal;\n"
-"border-radius: 15px;")
+                                   "position: absolute;\n"
+                                   "width: 440px;\n"
+                                   "height: 539px;\n"
+                                   "left: 190px;\n"
+                                   "top: 274px;\n"
+                                   "\n"
+                                   "background: #6F5E53;\n"
+                                   "mix-blend-mode: normal;\n"
+                                   "border-radius: 15px;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.label = QtWidgets.QLabel(self.frame_2)
         self.label.setGeometry(QtCore.QRect(0, 10, 571, 70))
         self.label.setStyleSheet("position: absolute;\n"
-"width: 440px;\n"
-"height: 70px;\n"
-"left: 189px;\n"
-"top: 167px;\n"
-"\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 60px;\n"
-"line-height: 78px;\n"
-"display: flex;\n"
-"align-items: flex-end;\n"
-"text-align: center;\n"
-"\n"
-"color: #FFFFFF;")
+                                 "width: 440px;\n"
+                                 "height: 70px;\n"
+                                 "left: 189px;\n"
+                                 "top: 167px;\n"
+                                 "\n"
+                                 "font-family: \'Montserrat\';\n"
+                                 "font-style: normal;\n"
+                                 "font-weight: 400;\n"
+                                 "font-size: 60px;\n"
+                                 "line-height: 78px;\n"
+                                 "display: flex;\n"
+                                 "align-items: flex-end;\n"
+                                 "text-align: center;\n"
+                                 "\n"
+                                 "color: #FFFFFF;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
 
@@ -244,6 +244,7 @@ class Chose_settings(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Chose_settings()

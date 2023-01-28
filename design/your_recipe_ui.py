@@ -19,15 +19,15 @@ class Your_recipe(object):
         self.frame = QtWidgets.QFrame(Form)
         self.frame.setGeometry(QtCore.QRect(155, 215, 520, 728))
         self.frame.setStyleSheet("\n"
-"position: absolute;\n"
-"width: 440px;\n"
-"height: 539px;\n"
-"left: 190px;\n"
-"top: 274px;\n"
-"\n"
-"background: #6F5E53;\n"
-"mix-blend-mode: normal;\n"
-"border-radius: 15px;")
+                                 "position: absolute;\n"
+                                 "width: 440px;\n"
+                                 "height: 539px;\n"
+                                 "left: 190px;\n"
+                                 "top: 274px;\n"
+                                 "\n"
+                                 "background: #6F5E53;\n"
+                                 "mix-blend-mode: normal;\n"
+                                 "border-radius: 15px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -37,65 +37,65 @@ class Your_recipe(object):
         font.setPointSize(-1)
         self.save_rec_pb.setFont(font)
         self.save_rec_pb.setStyleSheet("QPushButton\n"
-"{\n"
-"position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 584px;\n"
-"\n"
-"background: #41393E;\n"
-"border-radius: 15px;\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 28px;\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"   background-color:#8A7968;\n"
-"}")
+                                       "{\n"
+                                       "position: absolute;\n"
+                                       "width: 383px;\n"
+                                       "height: 60px;\n"
+                                       "left: 218px;\n"
+                                       "top: 584px;\n"
+                                       "\n"
+                                       "background: #41393E;\n"
+                                       "border-radius: 15px;\n"
+                                       "color: rgb(255, 255, 255);\n"
+                                       "font-size: 28px;\n"
+                                       "}\n"
+                                       "\n"
+                                       "QPushButton:hover\n"
+                                       "{\n"
+                                       "   background-color:#8A7968;\n"
+                                       "}")
         self.save_rec_pb.setObjectName("save_rec_pb")
         self.rec_plain_edit = QtWidgets.QPlainTextEdit(self.frame)
         self.rec_plain_edit.setGeometry(QtCore.QRect(40, 30, 441, 541))
         self.rec_plain_edit.setStyleSheet("color:white;\n"
-"font-size: 24px;\n"
-"border: 1px ridge #000000;\n"
-"border-radius: 5px;")
+                                          "font-size: 24px;\n"
+                                          "border: 1px ridge #000000;\n"
+                                          "border-radius: 5px;")
         self.rec_plain_edit.setPlainText("")
         self.rec_plain_edit.setObjectName("rec_plain_edit")
         self.frame_2 = QtWidgets.QFrame(Form)
         self.frame_2.setGeometry(QtCore.QRect(120, 70, 580, 100))
         self.frame_2.setStyleSheet("\n"
-"position: absolute;\n"
-"width: 440px;\n"
-"height: 539px;\n"
-"left: 190px;\n"
-"top: 274px;\n"
-"\n"
-"background: #6F5E53;\n"
-"mix-blend-mode: normal;\n"
-"border-radius: 15px;")
+                                   "position: absolute;\n"
+                                   "width: 440px;\n"
+                                   "height: 539px;\n"
+                                   "left: 190px;\n"
+                                   "top: 274px;\n"
+                                   "\n"
+                                   "background: #6F5E53;\n"
+                                   "mix-blend-mode: normal;\n"
+                                   "border-radius: 15px;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.label = QtWidgets.QLabel(self.frame_2)
         self.label.setGeometry(QtCore.QRect(0, 10, 571, 70))
         self.label.setStyleSheet("position: absolute;\n"
-"width: 440px;\n"
-"height: 70px;\n"
-"left: 189px;\n"
-"top: 167px;\n"
-"\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 60px;\n"
-"line-height: 78px;\n"
-"display: flex;\n"
-"align-items: flex-end;\n"
-"text-align: center;\n"
-"\n"
-"color: #FFFFFF;")
+                                 "width: 440px;\n"
+                                 "height: 70px;\n"
+                                 "left: 189px;\n"
+                                 "top: 167px;\n"
+                                 "\n"
+                                 "font-family: \'Montserrat\';\n"
+                                 "font-style: normal;\n"
+                                 "font-weight: 400;\n"
+                                 "font-size: 60px;\n"
+                                 "line-height: 78px;\n"
+                                 "display: flex;\n"
+                                 "align-items: flex-end;\n"
+                                 "text-align: center;\n"
+                                 "\n"
+                                 "color: #FFFFFF;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
 
@@ -111,6 +111,7 @@ class Your_recipe(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Your_recipe()

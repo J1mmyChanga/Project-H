@@ -19,106 +19,106 @@ class Login(object):
         self.label = QtWidgets.QLabel(Form)
         self.label.setGeometry(QtCore.QRect(60, 114, 700, 120))
         self.label.setStyleSheet("position: absolute;\n"
-"width: 700px;\n"
-"height: 120px;\n"
-"left: 60px;\n"
-"top: 114px;\n"
-"\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 110px;\n"
-"line-height: 134px;\n"
-"text-align: center;\n"
-"\n"
-"color: #FFFFFF;")
+                                 "width: 700px;\n"
+                                 "height: 120px;\n"
+                                 "left: 60px;\n"
+                                 "top: 114px;\n"
+                                 "\n"
+                                 "font-family: \'Montserrat\';\n"
+                                 "font-style: normal;\n"
+                                 "font-weight: 400;\n"
+                                 "font-size: 110px;\n"
+                                 "line-height: 134px;\n"
+                                 "text-align: center;\n"
+                                 "\n"
+                                 "color: #FFFFFF;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.frame = QtWidgets.QFrame(Form)
         self.frame.setGeometry(QtCore.QRect(190, 274, 440, 540))
         self.frame.setStyleSheet("\n"
-"position: absolute;\n"
-"width: 440px;\n"
-"height: 539px;\n"
-"left: 190px;\n"
-"top: 274px;\n"
-"\n"
-"background: #6F5E53;\n"
-"mix-blend-mode: normal;\n"
-"border-radius: 15px;")
+                                 "position: absolute;\n"
+                                 "width: 440px;\n"
+                                 "height: 539px;\n"
+                                 "left: 190px;\n"
+                                 "top: 274px;\n"
+                                 "\n"
+                                 "background: #6F5E53;\n"
+                                 "mix-blend-mode: normal;\n"
+                                 "border-radius: 15px;")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.label_2 = QtWidgets.QLabel(self.frame)
         self.label_2.setGeometry(QtCore.QRect(30, 40, 380, 40))
         self.label_2.setStyleSheet("position: absolute;\n"
-"width: 380px;\n"
-"height: 40px;\n"
-"left: 218px;\n"
-"top: 324px;\n"
-"\n"
-"font-family: \'Paytone One\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 28px;\n"
-"line-height: 39px;\n"
-"\n"
-"color: #FFFFFF;")
+                                   "width: 380px;\n"
+                                   "height: 40px;\n"
+                                   "left: 218px;\n"
+                                   "top: 324px;\n"
+                                   "\n"
+                                   "font-family: \'Paytone One\';\n"
+                                   "font-style: normal;\n"
+                                   "font-weight: 400;\n"
+                                   "font-size: 28px;\n"
+                                   "line-height: 39px;\n"
+                                   "\n"
+                                   "color: #FFFFFF;")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.frame)
         self.label_3.setGeometry(QtCore.QRect(30, 180, 380, 40))
         self.label_3.setStyleSheet("position: absolute;\n"
-"width: 380px;\n"
-"height: 40px;\n"
-"left: 218px;\n"
-"top: 324px;\n"
-"\n"
-"font-family: \'Paytone One\';\n"
-"font-style: normal;\n"
-"font-weight: 400;\n"
-"font-size: 28px;\n"
-"line-height: 39px;\n"
-"\n"
-"color: #FFFFFF;")
+                                   "width: 380px;\n"
+                                   "height: 40px;\n"
+                                   "left: 218px;\n"
+                                   "top: 324px;\n"
+                                   "\n"
+                                   "font-family: \'Paytone One\';\n"
+                                   "font-style: normal;\n"
+                                   "font-weight: 400;\n"
+                                   "font-size: 28px;\n"
+                                   "line-height: 39px;\n"
+                                   "\n"
+                                   "color: #FFFFFF;")
         self.label_3.setObjectName("label_3")
         self.number_le = QtWidgets.QLineEdit(self.frame)
         self.number_le.setGeometry(QtCore.QRect(30, 100, 383, 60))
         self.number_le.setStyleSheet("position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 364px;\n"
-"\n"
-"background: #AB947E;\n"
-"border-radius: 15px;\n"
-"position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 364px;\n"
-"\n"
-"background: #AB947E;\n"
-"border-radius: 15px;\n"
-"color: white;\n"
-"font-size: 28px;\n"
-"\n"
-"")
+                                     "width: 383px;\n"
+                                     "height: 60px;\n"
+                                     "left: 218px;\n"
+                                     "top: 364px;\n"
+                                     "\n"
+                                     "background: #AB947E;\n"
+                                     "border-radius: 15px;\n"
+                                     "position: absolute;\n"
+                                     "width: 383px;\n"
+                                     "height: 60px;\n"
+                                     "left: 218px;\n"
+                                     "top: 364px;\n"
+                                     "\n"
+                                     "background: #AB947E;\n"
+                                     "border-radius: 15px;\n"
+                                     "color: white;\n"
+                                     "font-size: 28px;\n"
+                                     "\n"
+                                     "")
         self.number_le.setText("")
         self.number_le.setObjectName("number_le")
         self.password_le = QtWidgets.QLineEdit(self.frame)
         self.password_le.setGeometry(QtCore.QRect(30, 240, 383, 60))
         self.password_le.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
         self.password_le.setStyleSheet("position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 364px;\n"
-"\n"
-"background: #AB947E;\n"
-"border-radius: 15px;\n"
-"color: white;\n"
-"font-size: 28px;\n"
-"")
+                                       "width: 383px;\n"
+                                       "height: 60px;\n"
+                                       "left: 218px;\n"
+                                       "top: 364px;\n"
+                                       "\n"
+                                       "background: #AB947E;\n"
+                                       "border-radius: 15px;\n"
+                                       "color: white;\n"
+                                       "font-size: 28px;\n"
+                                       "")
         self.password_le.setText("")
         self.password_le.setObjectName("password_le")
         self.login_pb = QtWidgets.QPushButton(self.frame)
@@ -127,23 +127,23 @@ class Login(object):
         font.setPointSize(-1)
         self.login_pb.setFont(font)
         self.login_pb.setStyleSheet("QPushButton\n"
-"{\n"
-"position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 584px;\n"
-"\n"
-"background: #41393E;\n"
-"border-radius: 15px;\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 28px;\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"   background-color:#8A7968;\n"
-"}")
+                                    "{\n"
+                                    "position: absolute;\n"
+                                    "width: 383px;\n"
+                                    "height: 60px;\n"
+                                    "left: 218px;\n"
+                                    "top: 584px;\n"
+                                    "\n"
+                                    "background: #41393E;\n"
+                                    "border-radius: 15px;\n"
+                                    "color: rgb(255, 255, 255);\n"
+                                    "font-size: 28px;\n"
+                                    "}\n"
+                                    "\n"
+                                    "QPushButton:hover\n"
+                                    "{\n"
+                                    "   background-color:#8A7968;\n"
+                                    "}")
         self.login_pb.setObjectName("login_pb")
         self.reg_pb = QtWidgets.QPushButton(self.frame)
         self.reg_pb.setGeometry(QtCore.QRect(30, 460, 383, 60))
@@ -151,23 +151,23 @@ class Login(object):
         font.setPointSize(-1)
         self.reg_pb.setFont(font)
         self.reg_pb.setStyleSheet("QPushButton\n"
-"{\n"
-"position: absolute;\n"
-"width: 383px;\n"
-"height: 60px;\n"
-"left: 218px;\n"
-"top: 584px;\n"
-"\n"
-"background: #41393E;\n"
-"border-radius: 15px;\n"
-"color: rgb(255, 255, 255);\n"
-"font-size: 28px;\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"   background-color:#8A7968;\n"
-"}")
+                                  "{\n"
+                                  "position: absolute;\n"
+                                  "width: 383px;\n"
+                                  "height: 60px;\n"
+                                  "left: 218px;\n"
+                                  "top: 584px;\n"
+                                  "\n"
+                                  "background: #41393E;\n"
+                                  "border-radius: 15px;\n"
+                                  "color: rgb(255, 255, 255);\n"
+                                  "font-size: 28px;\n"
+                                  "}\n"
+                                  "\n"
+                                  "QPushButton:hover\n"
+                                  "{\n"
+                                  "   background-color:#8A7968;\n"
+                                  "}")
         self.reg_pb.setObjectName("reg_pb")
 
         self.retranslateUi(Form)
@@ -185,6 +185,7 @@ class Login(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
     ui = Login()
