@@ -17,5 +17,5 @@ class GetUserRequest(Resource):
             "id": user.id,
             "name": user.name,
             "phone": user.phone,
-            "last_recipe": user.last_recipe.id
+            "last_recipe": user.last_recipe.id if user.last_recipe else None
         })

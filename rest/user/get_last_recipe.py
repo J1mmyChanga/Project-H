@@ -17,7 +17,7 @@ class GetLastRecipeRequest(Resource):
         return jsonify({
             "id": last_recipe.id,
             "name": last_recipe.name,
-            "criteria": map(lambda x: int(x), last_recipe.criteria.split(",")),
+            "criteria": list(map(lambda x: int(x), last_recipe.criteria.split(","))),
             "products": last_recipe.products,
             "cooking": last_recipe.cooking
         })

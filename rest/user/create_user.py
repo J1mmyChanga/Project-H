@@ -21,4 +21,4 @@ class CreateUserRequest(Resource):
         db_sess.add(user)
         db_sess.commit()
 
-        return jsonify("successful")
+        return jsonify({"id": user.id})

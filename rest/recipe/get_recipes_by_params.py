@@ -1,3 +1,4 @@
+import random
 from flask import jsonify, request
 from flask_restful import Resource
 
@@ -13,15 +14,16 @@ class GetRecipesByParams(Resource):
         params = list(map(lambda x: str(x), request.json["params"]))
         all_recipes = db_sess.query(Recipe).all()
         best_recipes = []
-
         for recipe in all_recipes:
             max_equality = 0
             for param in params:
-                if param == recipe.criteria.split(","):
+                if param in recipe.criteria.split(","):
                     max_equality += 1
             if max_equality > len(params) // 2:
                 best_recipes.append(recipe)
+        a = random.choice(best_recipes)
 
         return jsonify({
-            "id": recipe.id for recipe in best_recipes
+            "id": a.id,
+            "name": a.name
         })
