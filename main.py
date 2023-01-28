@@ -1,8 +1,12 @@
+import rest
 from flask import Flask
+from flask_restful import Api
 from data import db_session
 
-
 app = Flask(__name__)
+api = Api(app)
+
+api.add_resource(rest.create_user)
 
 
 def main():
