@@ -34,7 +34,6 @@ class Login(QtWidgets.QWidget, LoginWindow):
         registration.number_reg_le.clear()
         registration.password_reg_le.clear()
         stak.setCurrentWidget(registration)
-        print('a')
 
     @staticmethod
     def raise_exception(text):
