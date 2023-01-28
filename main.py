@@ -6,7 +6,7 @@ from data import db_session
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(rest.create_user)
+api.add_resource(rest.CreateUserRequest, "/api/create_user")
 
 
 def main():

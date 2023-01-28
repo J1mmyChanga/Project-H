@@ -11,3 +11,5 @@ class Recipe(SqlAlchemyBase):
     id = sql.Column(sql.Integer, autoincrement=True, unique=True, primary_key=True)
     name = sql.Column(sql.String)
     criteria = sql.Column(sql.String)
+    products = sql.Column(sql.String)
+    cooking = sql.Column(sql.String)
