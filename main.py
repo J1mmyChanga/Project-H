@@ -6,6 +6,8 @@ from PyQt5 import QtWidgets
 from design import *
 from lib import Lib
 
+number = ""
+
 
 class Login(QtWidgets.QWidget, LoginWindow):
     def __init__(self):
@@ -19,9 +21,15 @@ class Login(QtWidgets.QWidget, LoginWindow):
         self.reg_pb.clicked.connect(self.open_reg)
 
     def check_data(self):
+        global number
         num, password = self.number_le.text(), self.password_le.text()
-        ###проверка есть ли в бд###
-        open_settings()
+        number = num
+        if Lib.check_password(num, password):
+            open_settings()
+        else:
+            raise_exception("Некорректные данные")
+            self.number_le.setText('')
+            self.password_le.setText('')
 
     @staticmethod
     def open_reg():
@@ -41,8 +49,9 @@ class Registration(QtWidgets.QWidget, RegisterWindow):
         self.create_acc_pb.clicked.connect(self.check_data_filled_correctly)
 
     def check_data_filled_correctly(self):
+        global number
         num, password = self.number_reg_le.text(), self.password_reg_le.text()
-
+        number = num
         if len(num) != 12 or not num.startswith('+79'):
             raise_exception('Некорректно введён номер телефона')
             self.number_reg_le.setText('')
@@ -65,11 +74,12 @@ class Settings(QtWidgets.QWidget, SettingsWindow):
         self.find_rec_pb.clicked.connect(self.check_data_filled_correctly)
 
     def check_data_filled_correctly(self):
+        global per
         all_bg_checked = True
         d = {
             'Кино': 1,
             'Вечеринка': 2,
-            'Хочу просто поесть': 3,
+            'Просто хочу поесть': 3,
             'Просто и со вкусом': 4,
             'Что-то посложнее': 5,
             'Мясо': 6,
@@ -99,10 +109,15 @@ class Settings(QtWidgets.QWidget, SettingsWindow):
         # work with db
 
         if all_bg_checked:
-            Lib.get_recipe(self.plans, self.dif_level, self.preferences)
-            
+            a = Lib.get_recipe(self.plans, self.dif_level, self.preferences)
+            per = a
+            your_recipe.rec_plain_edit.setPlainText(per["name"])
+            self.open_recipe()
         else:
             self.raise_exception('Необходимо указать все параметры!')
+
+    def open_recipe(self):
+        stak.setCurrentWidget(your_recipe)
 
 
 class YourRecipe(QtWidgets.QWidget, YourRecipeWindow):
@@ -116,61 +131,14 @@ class YourRecipe(QtWidgets.QWidget, YourRecipeWindow):
         self.save_rec_pb.clicked.connect(self.check_data_filled_correctly)
 
     def check_data_filled_correctly(self):
-        global nickname
-        nicknames = [i[0] for i in self.con.cursor().execute("""SELECT nickname FROM users""").fetchall()]
-        emails = [i[0] for i in self.con.cursor().execute("""SELECT email FROM users""").fetchall()]
-        name = self.le_name.text()
-        nickname = self.le_nickname.text()
-        email = self.le_email.text()
-        password = self.le_password.text()
-
-        if not (name and nickname and email and password):
-            self.raise_exception('Необходимо заполнить все поля!')
-            return
-
-        if len(password) < 8 and password:
-            self.raise_exception('Пароль должен содержать как минимум 8 символов.')
-            return
-
-        if len(list(filter(lambda x: x in "0123456789", password))) < 2 and password:
-            self.raise_exception('Пароль должен содержать как минимум 2 цифры.')
-            return
-
-        if nickname in nicknames:
-            self.raise_exception('Пользователь с таким никнеймом уже существует!')
-            return
-
-        if email in emails:
-            self.raise_exception('Пользователь с таким адресом электронной почты уже существует!')
-            return
-
-        self.con.cursor().execute('''INSERT INTO users(name,nickname,email,password)
-                                            VALUES (?,?,?,?)''',
-                                  (name, nickname, email, password))
-        self.con.cursor().execute(f'''CREATE TABLE {nickname}_clothes (
-                                            id      INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                                            clothes INTEGER NOT NULL REFERENCES clothes (clothesid) UNIQUE);''')
-
-        self.con.cursor().execute(f'''CREATE TABLE {nickname}_favourite (
-                                            id     INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                                            look   INTEGER REFERENCES looks (looksid) UNIQUE NOT NULL,
-                                            output STRING  UNIQUE NOT NULL);''')
-
-        self.con.cursor().execute(f'''CREATE TABLE {nickname}_looks (
-                                            id     INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-                                            look   INTEGER UNIQUE NOT NULL REFERENCES looks (looksid),
-                                            output STRING UNIQUE NOT NULL);''')
-        update_session(self.le_nickname.text(), self.le_password.text())
-        output_photo = self.convert_to_binary(self.def_picture)
-        self.con.cursor().execute('''UPDATE users
-                        SET image = ?
-                        WHERE nickname = ?''', (output_photo, nickname))
-        self.con.commit()
+        user_id = Lib.get_user_by_phone(number)
+        Lib.set_last_recipe_request(user_id, per)
 
 
 def excepthook(exc_type, exc_value, exc_tb):
     tb = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
     print("Detected an error !: " + tb)
+
 
 def raise_exception(text):
     error = QtWidgets.QMessageBox()
@@ -179,10 +147,12 @@ def raise_exception(text):
     error.setIcon(QtWidgets.QMessageBox.Warning)
     error.exec()
 
+
 def open_settings():
     stak.setCurrentWidget(settings)
 
 
+per = {'id': 0, 'name': '0'}
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
 

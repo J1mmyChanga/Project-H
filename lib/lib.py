@@ -15,6 +15,13 @@ class Lib:
         return res["id"]
 
     @classmethod
+    def get_user_by_phone(cls, phone):
+        res = cls.session.get(cls.server_address + "/api/user/by_phone", json={
+            "phone": phone
+        }).json()
+        return res["id"]
+
+    @classmethod
     def check_password(cls, phone, password):
         res = cls.session.post(cls.server_address + "/api/user/check_pass", json={
             "phone": phone,
@@ -43,6 +50,6 @@ class Lib:
 
     @classmethod
     def get_recipe(cls, *params):
-        cls.session.get(cls.server_address + "/api/recipe/get_recipes", json={
+        return cls.session.get(cls.server_address + "/api/recipes/get_recipes", json={
             "params": list(params)
-        })
+        }).json()
