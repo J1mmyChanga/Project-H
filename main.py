@@ -3,6 +3,7 @@ import sys
 import traceback
 from PyQt5 import QtWidgets
 from design import *
+from lib import Lib
 
 
 class Login(QtWidgets.QWidget, LoginWindow):
