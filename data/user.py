@@ -12,6 +12,7 @@ class User(SqlAlchemyBase):
     phone = sql.Column(sql.String)
     name = sql.Column(sql.String)
     password = sql.Column(sql.String)
+    last_recipe_id = sql.Column(sql.Integer, sql.ForeignKey("recipes.id"))
 
     last_recipe = relationship("Recipe")
 
