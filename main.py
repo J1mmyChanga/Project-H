@@ -23,7 +23,6 @@ class Login(QtWidgets.QWidget, LoginWindow):
             nickname = self.le_login.text()
             self.le_login.setText('')
             self.le_password.setText('')
-            open_ward()
         else:
             self.raise_exception('Неверный логин или пароль: повторите ввод.')
             self.le_login.setText('')
