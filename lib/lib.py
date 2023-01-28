@@ -40,3 +40,9 @@ class Lib:
             "id": user_id,
             "recipe_id": recipe_id
         })
+
+    @classmethod
+    def get_recipe(cls, *params):
+        cls.session.get(cls.server_address + "/api/recipe/get_recipes", json={
+            "params": list(params)
+        })

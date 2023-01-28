@@ -1,4 +1,5 @@
 import os.path
+import requests
 import sys
 import traceback
 from PyQt5 import QtWidgets
@@ -64,7 +65,44 @@ class Settings(QtWidgets.QWidget, SettingsWindow):
         self.find_rec_pb.clicked.connect(self.check_data_filled_correctly)
 
     def check_data_filled_correctly(self):
-        pass
+        all_bg_checked = True
+        d = {
+            'Кино': 1,
+            'Вечеринка': 2,
+            'Хочу просто поесть': 3,
+            'Просто и со вкусом': 4,
+            'Что-то посложнее': 5,
+            'Мясо': 6,
+            'Рыба': 7,
+            'Салат': 8,
+            'Паста': 9,
+            'Десерт': 10,
+            'Не надо мыть посуду': 11,
+            'Закуска': 12
+        }
+
+        if self.plans_bg.checkedButton() is None:
+            all_bg_checked = False
+        else:
+            self.plans = d[self.plans_bg.checkedButton().text()]
+
+        if self.dif_level_bg.checkedButton() is None:
+            all_bg_checked = False
+        else:
+            self.dif_level = d[self.dif_level_bg.checkedButton().text()]
+
+        if self.preferences_bg.checkedButton() is None:
+            all_bg_checked = False
+        else:
+            self.preferences = d[self.preferences_bg.checkedButton().text()]
+
+        # work with db
+
+        if all_bg_checked:
+            Lib.get_recipe(self.plans, self.dif_level, self.preferences)
+            
+        else:
+            self.raise_exception('Необходимо указать все параметры!')
 
 
 class YourRecipe(QtWidgets.QWidget, YourRecipeWindow):
